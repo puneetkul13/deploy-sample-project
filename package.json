@@ -1,0 +1,38 @@
+{
+  "dependencies": {
+    "bundle-loader": "^0.5.5",
+    "node": "^19.8.1",
+    "prop-types": "^15.5.10",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^4.1.2",
+    "rimraf": "^2.6.1"
+  },
+  "devServer":{
+    "contentBase" : "BUILD_DIR",
+    "compress":true,
+    "port":9000
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^6.7.3",
+    "file-loader": "^0.11.2",
+    "html-webpack-plugin": "^5.5.0",
+    "image-webpack-loader": "^3.3.1",
+    "style-loader": "^3.3.2",
+    "webpack": "2.6.1",
+    "webpack-dev-server": "^2.7.1"
+  },
+  "name": "BasicApp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "webpack-dev-server",
+    "clean": "rimraf dist",
+    "build":"NODE_ENV=production && yarn clean && webpack -p"
+  }
+}
